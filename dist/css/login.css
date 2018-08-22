@@ -1,3 +1,6 @@
+body {
+  background-image: url(/Users/cdzhengwujiang/Desktop/Personal/node.js/webpack-electron/dist/images/dog.jpg);
+}
 .p-login {
   color: #39f;
 }
