@@ -5,6 +5,8 @@ const electron = require('electron');
 const remote = electron.remote;
 const path = require('path');
 
+import './index.less';
+
 class Index extends Component {
     constructor() {
         super();
@@ -29,8 +31,8 @@ class Index extends Component {
     render() {
         return (
             <div className="p-index">
-                Index...<br />
-                <input type="button" value="New window" onClick={this.handleClick} />
+                <div className="welcome">Hello world</div>
+                <input type="button" className="btn" value="New window" onClick={this.handleClick} />
             </div>
         );
     }

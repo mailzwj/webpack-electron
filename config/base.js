@@ -59,12 +59,14 @@ module.exports = {
     },
     plugins: [
         new htmlPlugin({
+            title: 'Index',
             template: 'app/tpl.html',
             chunks: ['common', 'index'],
             chunksSortMode: 'manual',
             filename: 'index.html'
         }),
         new htmlPlugin({
+            title: 'Login',
             template: 'app/tpl.html',
             chunks: ['common', 'login'],
             chunksSortMode: 'manual',
