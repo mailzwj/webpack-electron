@@ -11,6 +11,16 @@ npm install -g electron
 npm install
 ```
 
+## Run
+
+```bash
+# build
+npm run dev
+
+# start
+npm start
+```
+
 ## Commands
 
 ```bash
