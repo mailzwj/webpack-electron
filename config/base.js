@@ -6,6 +6,7 @@ const outputPath = path.resolve(__dirname, '../dist');
 
 module.exports = {
     entry: {
+        common: ['react', 'react-dom'],
         index: path.resolve(__dirname, '../app/pages/index.js'),
         login: path.resolve(__dirname, '../app/pages/login.js')
     },
@@ -14,7 +15,7 @@ module.exports = {
         filename: 'js/[name].js',
         chunkFilename: 'js/[name].bundle.js'
     },
-    target: 'electron-renderer',
+    // target: 'electron-renderer',
     module: {
         rules: [
             {
