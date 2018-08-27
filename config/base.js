@@ -15,7 +15,8 @@ module.exports = {
         filename: 'js/[name].js',
         chunkFilename: 'js/[name].bundle.js'
     },
-    // target: 'electron-renderer',
+
+    target: 'electron-renderer',
     module: {
         rules: [
             {
