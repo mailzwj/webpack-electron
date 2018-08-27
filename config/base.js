@@ -6,7 +6,7 @@ const outputPath = path.resolve(__dirname, '../dist');
 
 module.exports = {
     entry: {
-        common: ['react', 'react-dom'],
+        // common: ['react', 'react-dom'],
         index: path.resolve(__dirname, '../app/pages/index.js'),
         login: path.resolve(__dirname, '../app/pages/login.js')
     },
@@ -15,7 +15,17 @@ module.exports = {
         filename: 'js/[name].js',
         chunkFilename: 'js/[name].bundle.js'
     },
-
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "common",
+                    chunks: "all"
+                }
+            }
+        }
+    },
     target: 'electron-renderer',
     module: {
         rules: [
